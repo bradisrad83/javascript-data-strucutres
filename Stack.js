@@ -22,7 +22,7 @@ class Stack{
             newNode.next = first;
         }
         this.size++;
-        return this;
+        return this.size;
     }
     pop() {
         if(!this.first) return null;
