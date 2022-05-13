@@ -28,4 +28,30 @@ class HashTable{
         }
         return undefined;
     }
+    keys() {
+        let keys = [];
+        for(let i = 0; i < this.keyMap.length; i++) {
+            if(this.keyMap[i]) {
+                for(let k = 0; k < this.keyMap[i].length; k++) {
+                    if(!keys.includes(this.keyMap[i][k][0])) {
+                        keys.push(this.keyMap[i][k][0]);
+                    }
+                }
+            }
+        }
+        return keys;
+    }
+    values() {
+        let values = [];
+        for(let i = 0; i < this.keyMap.length; i++) {
+            if(this.keyMap[i]) {
+                for(let k = 0; k < this.keyMap[i].length; k++) {
+                    if(!values.includes(this.keyMap[i][k][1])) {
+                        values.push(this.keyMap[i][k][1]);
+                    }
+                } 
+            }
+        }
+        return values;
+    }
 }
