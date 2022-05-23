@@ -23,4 +23,5 @@ function efficientBubbleSort(arr) {
             }            
         }
     }
+    return arr;
 }
